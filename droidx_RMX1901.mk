@@ -11,19 +11,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
 # Inherit some common Havoc stuff.
-$(call inherit-product, vendor/droidx/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_FACE_UNLOCK_SUPPORTED := true
 TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_GAPPS_ARCH := arm64
+FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_SUPPORTS_QUICK_TAP := true
 EXTRA_UDFPS_ANIMATIONS := true
 TARGET_HAS_UDFPS := true
-TARGET_ENABLE_BLUR := true
-DROIDX_GAPPS := true
-TARGET_SUPPORTS_QUICK_TAP := true
-DROIDX_BUILDTYPE := UNOFFICIAL
-DROIDX_MAINTAINER := S-H-R-A-V-A-N
-
+PEX_BUILD_TYPE := UNOFFICIAL
 
 # Inherit from RMX1901 device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
@@ -31,7 +30,7 @@ $(call inherit-product, $(LOCAL_PATH)/device.mk)
 PRODUCT_BRAND := Realme
 PRODUCT_DEVICE := RMX1901
 PRODUCT_MANUFACTURER := Realme
-PRODUCT_NAME := droidx_RMX1901
+PRODUCT_NAME := aosp_RMX1901
 PRODUCT_MODEL := Realme X
 
 PRODUCT_GMS_CLIENTID_BASE := android-oppo

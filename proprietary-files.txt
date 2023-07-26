@@ -62,11 +62,13 @@ vendor/lib64/rfsa/adsp/libBeautyShot_skel.so
 vendor/lib64/rfsa/adsp/libdsp_streamer_add_constant.so
 vendor/lib64/rfsa/adsp/libdsp_streamer_skel.so
 
-# ANT+
+# ANT+ (system) - from LA.QSSI.13.0.r1-09700-qssi.0
 -lib/libantradio.so
 -lib64/libantradio.so
-product/lib/com.qualcomm.qti.ant@1.0.so
-product/lib64/com.qualcomm.qti.ant@1.0.so
+system_ext/lib/com.qualcomm.qti.ant@1.0.so|ef2c19734749bee9662a6f6e1cd924387c5bbb9c
+system_ext/lib64/com.qualcomm.qti.ant@1.0.so|2bdd0b1538f514f237c2ed3915d755cdbd5e2743
+
+# ANT+ (vendor)
 vendor/lib/com.qualcomm.qti.ant@1.0.so
 vendor/lib/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib64/com.qualcomm.qti.ant@1.0.so
@@ -101,9 +103,11 @@ vendor/lib/hw/audio.primary.sdm710.so
 vendor/lib/libaudioEngineerTest.so
 vendor/lib/libaudio_log_utils.so
 
-# Audio FX modules
-etc/permissions/audiosphere.xml
-framework/audiosphere.jar
+# Audio FX modules (system) - from LA.QSSI.13.0.r1-09700-qssi.0
+system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
+system_ext/framework/audiosphere.jar|3c42dff6da0571acd9ea466983c7f6354d588bb3
+
+# Audio FX Modules (vendor)
 vendor/lib64/soundfx/libasphere.so
 vendor/lib64/soundfx/libqcbassboost.so
 vendor/lib64/soundfx/libqcreverb.so
@@ -566,13 +570,41 @@ vendor/lib/vendor.display.postproc@1.0.so|251c33b11743f5e24ca220b220da367996f307
 vendor/etc/qdcm_calib_data_oppo18041samsung_ams653tk01_1080_2340_cmd_mode_dsi_panel.xml
 vendor/etc/OPPO_OLED_AD_calib.cfg
 
+# Dolby - from 9R OOS 11.2.8.8
+system/lib64/vendor.dolby.hardware.dms@2.0.so|0a1cb972160890b07baf3a3e624e9ec1273befed
+-system_ext/priv-app/DaxUI/DaxUI.apk|89e8ceabb19458b872eed0560a627eb2ff4c4dc4
+-system_ext/priv-app/daxService/daxService.apk|ed1de719afc7181a7e896e0eeaf14edc00761c21
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|84247a3563b362e97dacaa79d4845c1292a92f13
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
+vendor/lib/libdapparamstorage.so|6c488c6bc88abe13c6fd689124475526c1cf41b8
+vendor/lib/libdeccfg.so|28b3aa2368d091b50ef7d5f3c3d44466a89172f8
+vendor/lib/libqtigef.so|d2e8b296db9d8ff19051858ee1a0143e06c69df3
+vendor/lib/libstagefright_soft_ddpdec.so|c1a83910911cdab332088b10b2d3675b735a9524
+vendor/lib/libstagefrightdolby.so|c4269437c623630cf9c79c2010a7cfb88828584a
+vendor/lib/soundfx/libeffectproxy.so|44289fe864b085d53c051ad42ed233727ced175c
+vendor/lib/soundfx/libhwdap.so|6348b774b3df7bd2f485186f2ebc3e84d9435df8
+vendor/lib/soundfx/libswdap.so|bd73d33628837d0e3aa18d85c5ffb8e95b87af1b
+vendor/lib/soundfx/libswgamedap.so|a4d17b610b5cd873bd82c28f7361ba66a5d2c48e
+vendor/lib/vendor.dolby.hardware.dms@2.0.so|73532d31c8fdad87b69e9cc1724dfc5b02a893e7
+vendor/lib64/libdapparamstorage.so|b820de455f13bce531331f9e134b1e56b8a651d4
+vendor/lib64/libdeccfg.so|adea652793ab688253b0b56d6c165625184eab54
+vendor/lib64/libdlbdsservice.so|f8867071a19efabef94eae4eb62424a5a88b9ef0
+vendor/lib64/libstagefright_soft_ddpdec.so|555b5b366c35bad0c6d6e98a3d04f1105e4d9e92
+vendor/lib64/libstagefrightdolby.so|67157be87b3d8fe2c5a057044ce596ce1b68d16b
+vendor/lib64/soundfx/libeffectproxy.so|e09115bb4087510eab62d21ab050274d6c98db71
+vendor/lib64/soundfx/libhwdap.so|901e19f8e271c8d228e41136ea8d611c3b3d30b4
+vendor/lib64/soundfx/libswdap.so|a468c839bd18e31d50f92d371dbd079374667068
+vendor/lib64/soundfx/libswgamedap.so|0491096a45e14d8097ceb80c15c0f946bbade389
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|da03a56f6fbeb2bbe23ebb3a48b30fc3e5e76da3
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|45ab26d743b6a56b505447012347493ff41057fc
+
 # dpAP Firmware
 vendor/firmware/dpAP_full.mbn
 vendor/firmware/dpAP_mini.mbn
 
-# DPM (system) - from LA.QSSI.13.0.r1-05800-qssi.0
+# DPM (system) - from LA.QSSI.13.0.r1-09700-qssi.0
 framework/tcmclient.jar|0402c82a800b58a2e93fd7cb8e81a24e674ebc35
-system_ext/bin/dpmd|606bf68351189bb5cdbdf86630c018a209862e03
+system_ext/bin/dpmd|d098df72c60697de359a80d6377689d98fb11221
 system_ext/etc/dpm/dpm.conf|95e27da8c989e96c6faea6f0697bce11955b62a5
 system_ext/etc/init/dpmd.rc|738b638ff04cda368e22c03e16baf90ba157a6fc
 system_ext/etc/permissions/com.qti.dpmframework.xml|c4b7ad0879d00c1eba4f3fe3a88ddb8aa153629a
@@ -1226,10 +1258,11 @@ vendor/lib64/vendor.qti.hardware.alarm@1.0.so|c7c418cfc889a89ea4f21bf828f626c75a
 vendor/bin/hw/android.hardware.health@2.1-service|977491e82ca92e267e88f4f8ed655dad0c9fbd83
 vendor/etc/init/android.hardware.health@2.1-service.rc|07814dfd61ba11205f1ad730828a9d8d3b7df509
 
-# QMI - from LA.QSSI.12.0.r1-05800.02-qssi.0
-etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
-etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
+# QMI (system) - from LA.QSSI.13.0.r1-09700-qssi.0
+system_ext/etc/permissions/qti_libpermissions.xml|593bcb72cce68ceb0a70f50bcae7d460114e7c62
+system_ext/etc/permissions/qti_permissions.xml|e6ff4572352b1a4f91b6b9d7cbb1cad9924410a0
 
+# QMI (vendor)
 vendor/bin/irsc_util
 vendor/etc/sec_config
 vendor/lib64/libdiag.so
@@ -1265,16 +1298,16 @@ vendor/lib/libqmi_csi.so
 vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 
-# RIL - from LA.QSSI.12.0.r1-05800.02-qssi.0
--system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|c8a2ce9a86e542daf835dc0bfa1a63ed7e412d84
+# RIL (system) - from LA.QSSI.13.0.r1-09700-qssi.0
+-system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|38701f94dca753199cbff47b338a71851a3280bf
 system_ext/etc/permissions/qcrilhook.xml|30397e293b2c40e6b7a1d11c2a615cdd05de625a
-system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|4f0056403f56928b8c75a617ba582f17061f89ae
-system_ext/framework/qcrilhook.jar|f251fd8cf621c66a970597954c257d69b6136eda
-system_ext/framework/qti-telephony-common.jar|fee3a1ee6888cd849ad7b7294e7c50c26ef80ac1
--system_ext/priv-app/ims/ims.apk|34e0485aea9b680756aa88794b18f8dca024fb33
--system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|47ff9a1712950fc9f877691f2712d8aa7fcf3420
+system_ext/etc/permissions/telephony_system-ext_privapp-permissions-qti.xml|a7e114ea1e6909685ce49717a2b5b66d8275d419
+system_ext/framework/qcrilhook.jar|8d44048c04f4d38a6bf6a279e3bceface10c0dde
+system_ext/framework/qti-telephony-common.jar|8d94e50a8dc3e796e3a4c78cefdf6903bf1a524e
+-system_ext/priv-app/ims/ims.apk|5690534155879d101cbe323456b01f29cb97b8b4
+-system_ext/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk|e3cf3ab60bf632270eccc4e99ead89254d3d84ab
 
-# RIL
+# RIL (vendor)
 -vendor/app/IWlanService/IWlanService.apk
 vendor/bin/hw/qcrild
 vendor/bin/adpl
@@ -1544,25 +1577,6 @@ vendor/firmware/ufs/SKhynix-H9HQ53AECMMDAR.bin
 
 # WiFi
 vendor/bin/cnss-daemon
-
-# MotoDolbyV3
--app/MotoDolbyV3/MotoDolbyV3.apk
--product/priv-app/daxService/daxService.apk
-etc/permissions/com.motorola.dolby.dolbyui.features.xml
-etc/sysconfig/hiddenapi-whitelist-com.motorola.dolby.dolbyui.xml
-product/etc/permissions/com.dolby.daxservice.xml
-vendor/bin/hw/vendor.dolby.hardware.dms@1.0-service
-vendor/etc/init/vendor.dolby.hardware.dms@1.0-service.rc
-vendor/etc/dolby/dax-default.xml
-vendor/lib/libdapparamstorage.so
-vendor/lib/libstagefrightdolby.so
-vendor/lib/vendor.dolby.hardware.dms@1.0.so
-vendor/lib/soundfx/libswdap.so
-vendor/lib64/libdapparamstorage.so
-vendor/lib64/libdlbdsservice.so
-vendor/lib64/soundfx/libswdap.so
-vendor/lib64/vendor.dolby.hardware.dms@1.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@1.0.so
 
 # WFD - from RUI2 11/RKQ1.201217.002/1619368911282:user/release-keys
 vendor/bin/wfdvndservice|f61f0c364444e750920f57cb1f1cda3a21b0dbbd
